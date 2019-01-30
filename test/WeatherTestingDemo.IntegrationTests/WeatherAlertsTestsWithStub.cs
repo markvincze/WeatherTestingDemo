@@ -62,7 +62,7 @@ namespace WeatherTestingDemo.IntegrationTests
 
                 var responseObject = JObject.Parse(await response.Content.ReadAsStringAsync());
 
-                Assert.Contains("snow", responseObject["alert"].Value<string>());
+                Assert.Equal("It's snowing!", responseObject["alert"].Value<string>());
             }
         }
     }

@@ -38,7 +38,7 @@ namespace WeatherTestingDemo.UnitTests.Controllers
 
             Assert.IsType<WeatherAlert>(resultObject);
 
-            Assert.NotNull(((WeatherAlert)resultObject).Alert);
+            Assert.Equal("It's snowing!", ((WeatherAlert)resultObject).Alert);
         }
     }
 }
